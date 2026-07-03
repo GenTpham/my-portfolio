@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%" style="background-color: #0f172a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Arrow heads -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8" />
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrow-pink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f472b6" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c084fc" />
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <text x="600" y="50" fill="#f8fafc" font-size="32" font-weight="700" text-anchor="middle">Privacy Policy Compliance Assistant</text>
+  <text x="600" y="80" fill="#94a3b8" font-size="18" text-anchor="middle">System Architecture &amp; Data Flow</text>
+
+  <!-- Connectors -->
+  <!-- Client to Backend -->
+  <path d="M 600 180 L 600 230" stroke="#38bdf8" stroke-width="3" fill="none" marker-end="url(#arrow-blue)" />
+  <text x="615" y="215" fill="#38bdf8" font-size="14" font-weight="600">REST / SSE</text>
+
+  <!-- Backend to Databases -->
+  <!-- Auth to SQL -->
+  <path d="M 310 380 L 250 490" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <!-- RAG to Qdrant -->
+  <path d="M 480 380 L 460 490" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <!-- Graph to Neo4j -->
+  <path d="M 650 380 L 670 490" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <!-- Doc to GCS -->
+  <path d="M 810 380 L 850 490" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Backend to LLM -->
+  <path d="M 920 340 L 1010 340" stroke="#c084fc" stroke-width="2" fill="none" marker-end="url(#arrow-purple)" />
+
+  <!-- Airflow to Databases -->
+  <!-- Chunker to Qdrant -->
+  <path d="M 500 700 L 460 590" stroke="#f472b6" stroke-width="2" fill="none" marker-end="url(#arrow-pink)" stroke-dasharray="5,5" />
+  <!-- Graph Extractor to Neo4j -->
+  <path d="M 600 700 L 670 590" stroke="#f472b6" stroke-width="2" fill="none" marker-end="url(#arrow-pink)" stroke-dasharray="5,5" />
+  <!-- Airflow to LLM -->
+  <path d="M 890 730 L 1090 730 L 1090 390" stroke="#c084fc" stroke-width="2" fill="none" marker-end="url(#arrow-purple)" stroke-dasharray="5,5" />
+
+  <!-- Components -->
+  
+  <!-- Frontend -->
+  <rect x="450" y="120" width="300" height="60" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)" />
+  <text x="600" y="145" fill="#f8fafc" font-size="18" font-weight="600" text-anchor="middle">Web Client (React + Vite)</text>
+  <text x="600" y="165" fill="#94a3b8" font-size="14" text-anchor="middle">UI, Chat Page, Dashboard</text>
+
+  <!-- Backend Group -->
+  <rect x="220" y="240" width="700" height="170" rx="12" fill="#1e293b" stroke="#475569" stroke-width="2" filter="url(#shadow)" />
+  <text x="240" y="270" fill="#f8fafc" font-size="20" font-weight="600">Backend API (FastAPI)</text>
+  
+  <rect x="240" y="300" width="140" height="80" rx="6" fill="#334155" stroke="#64748b" stroke-width="1" />
+  <text x="310" y="335" fill="#e2e8f0" font-size="16" font-weight="600" text-anchor="middle">Auth Service</text>
+  <text x="310" y="355" fill="#94a3b8" font-size="12" text-anchor="middle">JWT, User Mgmt</text>
+
+  <rect x="400" y="300" width="160" height="80" rx="6" fill="#334155" stroke="#64748b" stroke-width="1" />
+  <text x="480" y="335" fill="#e2e8f0" font-size="16" font-weight="600" text-anchor="middle">RAG &amp; Chat</text>
+  <text x="480" y="355" fill="#94a3b8" font-size="12" text-anchor="middle">Vector Search, LLM</text>
+
+  <rect x="580" y="300" width="140" height="80" rx="6" fill="#334155" stroke="#64748b" stroke-width="1" />
+  <text x="650" y="335" fill="#e2e8f0" font-size="16" font-weight="600" text-anchor="middle">Graph Search</text>
+  <text x="650" y="355" fill="#94a3b8" font-size="12" text-anchor="middle">Knowledge Graph</text>
+
+  <rect x="740" y="300" width="140" height="80" rx="6" fill="#334155" stroke="#64748b" stroke-width="1" />
+  <text x="810" y="335" fill="#e2e8f0" font-size="16" font-weight="600" text-anchor="middle">Doc Mgmt</text>
+  <text x="810" y="355" fill="#94a3b8" font-size="12" text-anchor="middle">Files &amp; Uploads</text>
+
+  <!-- External LLM -->
+  <rect x="1020" y="300" width="140" height="80" rx="8" fill="#4a044e" stroke="#c084fc" stroke-width="2" filter="url(#shadow)" />
+  <text x="1090" y="335" fill="#f8fafc" font-size="16" font-weight="600" text-anchor="middle">OpenRouter</text>
+  <text x="1090" y="355" fill="#d8b4fe" font-size="12" text-anchor="middle">LLM &amp; Embeddings</text>
+
+  <!-- Databases -->
+  <rect x="180" y="500" width="140" height="80" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)" />
+  <text x="250" y="535" fill="#f8fafc" font-size="16" font-weight="600" text-anchor="middle">SQL DB</text>
+  <text x="250" y="555" fill="#94a3b8" font-size="12" text-anchor="middle">Postgres/SQLite</text>
+
+  <rect x="380" y="500" width="160" height="80" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="2" filter="url(#shadow)" />
+  <text x="460" y="535" fill="#f8fafc" font-size="16" font-weight="600" text-anchor="middle">Qdrant</text>
+  <text x="460" y="555" fill="#94a3b8" font-size="12" text-anchor="middle">Vector Database</text>
+
+  <rect x="600" y="500" width="140" height="80" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)" />
+  <text x="670" y="535" fill="#f8fafc" font-size="16" font-weight="600" text-anchor="middle">Neo4j</text>
+  <text x="670" y="555" fill="#94a3b8" font-size="12" text-anchor="middle">Graph Database</text>
+
+  <rect x="780" y="500" width="140" height="80" rx="8" fill="#1e293b" stroke="#6366f1" stroke-width="2" filter="url(#shadow)" />
+  <text x="850" y="535" fill="#f8fafc" font-size="16" font-weight="600" text-anchor="middle">GCS</text>
+  <text x="850" y="555" fill="#94a3b8" font-size="12" text-anchor="middle">Object Storage</text>
+
+  <!-- Data Ingestion Pipeline Group -->
+  <rect x="220" y="650" width="700" height="150" rx="12" fill="#1e293b" stroke="#ec4899" stroke-width="2" stroke-dasharray="4,4" filter="url(#shadow)" />
+  <text x="240" y="680" fill="#f8fafc" font-size="20" font-weight="600">Data Ingestion Pipeline (Apache Airflow)</text>
+  
+  <rect x="250" y="700" width="160" height="60" rx="6" fill="#334155" stroke="#64748b" stroke-width="1" />
+  <text x="330" y="725" fill="#e2e8f0" font-size="14" font-weight="600" text-anchor="middle">Document Source</text>
+  <text x="330" y="745" fill="#94a3b8" font-size="12" text-anchor="middle">PDFs / Policies</text>
+
+  <path d="M 410 730 L 450 730" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <rect x="460" y="700" width="180" height="60" rx="6" fill="#334155" stroke="#64748b" stroke-width="1" />
+  <text x="550" y="725" fill="#e2e8f0" font-size="14" font-weight="600" text-anchor="middle">Chunking &amp; Extraction</text>
+  <text x="550" y="745" fill="#94a3b8" font-size="12" text-anchor="middle">Graph &amp; Text Extraction</text>
+
+  <path d="M 640 730 L 680 730" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <rect x="690" y="700" width="200" height="60" rx="6" fill="#334155" stroke="#64748b" stroke-width="1" />
+  <text x="790" y="725" fill="#e2e8f0" font-size="14" font-weight="600" text-anchor="middle">Embedding &amp; Enrichment</text>
+  <text x="790" y="745" fill="#94a3b8" font-size="12" text-anchor="middle">LLM Metadata Gen.</text>
+
+  <!-- Legend -->
+  <rect x="40" y="750" width="160" height="80" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" />
+  <text x="50" y="770" fill="#f8fafc" font-size="14" font-weight="600">Legend</text>
+  
+  <path d="M 50 790 L 70 790" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="80" y="795" fill="#94a3b8" font-size="12">App Flow</text>
+  
+  <path d="M 50 810 L 70 810" stroke="#f472b6" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow-pink)" />
+  <text x="80" y="815" fill="#94a3b8" font-size="12">Async Ingestion</text>
+
+</svg>
