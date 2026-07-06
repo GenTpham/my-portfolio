@@ -29,6 +29,13 @@ export default function ProjectsSection() {
       tags: ["Agentic Workflow", "Vision AI", "ReAct Loop", "REST API", "Python"],
       href: "/projects/se-auto-draw",
       isHero: false,
+    },
+    {
+      title: "The AI Project Manager",
+      description: "A fully autonomous Multi-Agent System orchestrating 6 specialized agents to automate Agile software planning. Deployed on Vertex AI Agent Engine for the Kaggle Capstone Project.",
+      tags: ["Google ADK 2.0", "Vertex AI", "Gemini 2.5 Flash", "Multi-Agent"],
+      href: "/projects/ai-project-manager",
+      isHero: false,
     }
   ];
 
@@ -55,6 +62,9 @@ export default function ProjectsSection() {
         </div>
         <div>
           <ProjectCard {...projects[3]} />
+        </div>
+        <div>
+          <ProjectCard {...projects[4]} />
         </div>
       </div>
     </section>
